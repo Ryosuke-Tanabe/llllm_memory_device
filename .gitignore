@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+
+# Python 仮想環境（配布リポには含めない）
+.venv/
+venv/
+
+# 実行ログ・トランスクリプト等の作業成果物（配布物ではない）
+*.log
+run_live.log
+
+# AI専用ストアの中身（生成された思考データ）はリポジトリに含めない。
+# フォルダ構造だけ残すため .gitkeep は除外しない。
+ai_ssot/journal_by_day/**
+ai_ssot/indexes/**
+!ai_ssot/journal_by_day/.gitkeep
+!ai_ssot/indexes/.gitkeep
+!ai_ssot/indexes/sessions/.gitkeep
+
+# 画像などのメディア（画像貼り付け機能の保存先）。一次情報だが個人データなので公開しない。
+ai_ssot/media/**
+!ai_ssot/media/.gitkeep
+
+# 学習ペア等の書き出し。派生物かつ個人データなので公開しない。
+ai_ssot/exports/**
+!ai_ssot/exports/.gitkeep
+
+# ファイル連携の可逆バックアップ。個人データなので公開しない。
+ai_ssot/file_backups/**
+!ai_ssot/file_backups/.gitkeep
+
+# 計算済みの重力データ（vectors/centroids/crystals）は再生成可能な派生物。
+*.bak_trunc
+*.bak_pre_*
